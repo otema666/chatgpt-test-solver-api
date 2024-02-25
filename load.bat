@@ -1,15 +1,18 @@
 @echo off
 
-set exe_found=false
+set "exe_name=clipboard.exe"
 
-for /f %%i in ('forfiles /m *.exe /c "cmd /c echo @file"') do (
-    set exe_found=true
-    start /B "%%~ni" "%%i"
-    msg * Programa en ejecucion
-
+:main
+tasklist /FI "IMAGENAME eq %exe_name%" | find /I "%exe_name%" > NUL
+if %errorlevel% equ 0 (
+    msg * El programa ya esta en ejecucion
+) else (
+    if exist %exe_name% (
+        start /B %exe_name%
+        msg * Programa ejecutado
+    ) else (
+        msg * clipboard.exe no encontrado, compilando mediante gcc...
+        gcc main.c -o clipboard.exe -mwindows -luser32 -lgdi32
+        goto main
+    )
 )
-
-if "%exe_found%"=="false" (
-    start create_exe.bat
-)
-exit

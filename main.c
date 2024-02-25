@@ -54,7 +54,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
           ShowBalloonTip(NULL, "System", "Done");
 
           // Execute the command after saving the file
-          system("start /B python clipboard.py");
+          system("python clipboard.py");
         }
 
         GlobalUnlock(hData);
@@ -86,7 +86,7 @@ void ShowBalloonTip(HWND hwnd, LPCSTR title, LPCSTR text) {
   // Show the notification
   Shell_NotifyIcon(NIM_ADD, &nid);
 
-  // Hide the notification after 5 seconds
+  // Hide the notification after 1 second
   Sleep(1000);
   Shell_NotifyIcon(NIM_DELETE, &nid);
 }

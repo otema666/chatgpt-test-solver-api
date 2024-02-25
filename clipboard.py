@@ -1,3 +1,5 @@
+import main
+
 def procesar_archivo(entrada, salida):
     with open(entrada, 'r', encoding='utf-8', errors='ignore') as f:
         lineas = f.readlines()
@@ -24,3 +26,5 @@ def procesar_archivo(entrada, salida):
                 ultima_linea_salto = True
 
 procesar_archivo('portapapeles', 'portapapeles')
+
+main.discord_request()
