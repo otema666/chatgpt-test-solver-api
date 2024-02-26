@@ -48,7 +48,7 @@ install_requirements.bat
   2. To kill the process, use `kill.bat` (if you have **Windows 10/11 HOME** use `killWinHOME.bat`)
   3. `clipboard.exe` will run in the background, waiting for your keyboard press.
 
-#### If not, you can download the clipboard from [here]()
+#### If not, you can download the clipboard from [here](https://github.com/otema666/chatgpt-test-solver-api/releases/download/v0.1.0/clipboard.exe
   1. Move the downloaded .exe to the repo folder
   2. Run `clipboard.exe`
   3. To kill the process, use `kill.bat` (if you have Windows 10/11 HOME use `killWinHOME.bat`)
