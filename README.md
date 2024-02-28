@@ -3,6 +3,9 @@
 
 This is a Windows application designed to quickly solve multiple-choice questions automatically. The program listens for the user to press the <kbd>Ctrl + Alt + 0</kbd> key combination. When this key combination is detected, the application captures the current contents of the clipboard (the user must first copy the question using <kbd>Ctrl + C</kbd>), sends it to ChatGPT for processing, and then forwards the generated response to a specified Discord webhook.
 
+# **New linux version!**
+Now you can use it on linux
+
 ## Prompt
 The script includes a [prompt](https://github.com/otema666/chatgpt-test-solver-api/blob/main/prompt.txt) to guide ChatGPT on how it should respond. Here it is:
 
@@ -18,6 +21,8 @@ start.
 ```
 
 ## Setting Up
+
+## Windows
 
 ### Step 1: Clone the Repository
 
@@ -40,6 +45,12 @@ install_requirements.bat
 1. Open `main.py` in a text editor.
 2. Replace `<api_key>` with your [OpenAI API key](https://platform.openai.com/api-keys).
 3. Replace `<webhook_url>` with your [Discord webhook URL](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+
+## Linux
+
+```sh
+git clone https://github.com/otema666/chatgpt-test-solver-api.git && bash chatgpt-test-solver-api/linux/installer.sh 
+```
 
 ## Usage
 

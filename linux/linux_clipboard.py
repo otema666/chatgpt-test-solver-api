@@ -1,30 +1,21 @@
 from revChatGPT.V3 import Chatbot
 from os import remove
-import requests
+import pyperclip
 
-def discord_request():
-    api_key = "<ChatGpt_api_key>"
-    webhook_url = "Discord_webhook"
-    bot_name = "ChatGPT"
+def chatgpt_request():
+    api_key = ""
 
     chatbot = Chatbot(api_key)
     mensaje = crear_mensaje()
     respuesta = chatbot.ask(mensaje)
     
-    # Copia la respuesta al portapapeles
     pyperclip.copy(respuesta)
-    
-    data = {
-        "content": respuesta,
-        "username": bot_name
-    }
-    requests.post(webhook_url, data=data)
 
 def crear_mensaje():
     pregunta_portapapeles = ""
     prompt = ""
     
-    with open("prompt.txt", "r", encoding='utf-8') as txt_prompt:
+    with open("../prompt.txt", "r", encoding='utf-8') as txt_prompt:
         for linea in txt_prompt:
             prompt += linea 
 
@@ -37,4 +28,7 @@ def crear_mensaje():
     mensaje = prompt + pregunta_portapapeles
 
     return mensaje
+
+pyperclip.copy("espera....")
+chatgpt_request()
 
