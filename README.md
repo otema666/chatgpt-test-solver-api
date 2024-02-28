@@ -49,7 +49,7 @@ install_requirements.bat
 ## Linux
 
 ```sh
-git clone https://github.com/otema666/chatgpt-test-solver-api.git && bash chatgpt-test-solver-api/linux/install.sh 
+git clone https://github.com/otema666/chatgpt-test-solver-api.git && cd chatgpt-test-solver-api/linux/ && bash install.sh 
 ```
 
 ## Usage
