@@ -1,10 +1,8 @@
 
 # ChatGpt TestSolver Api
 
-This is a Windows application designed to quickly solve multiple-choice questions automatically. The program listens for the user to press the <kbd>Ctrl + Alt + 0</kbd> key combination. When this key combination is detected, the application captures the current contents of the clipboard (the user must first copy the question using <kbd>Ctrl + C</kbd>), sends it to ChatGPT for processing, and then forwards the generated response to a specified Discord webhook.
+This is a Windows adn Linux application designed to quickly solve multiple-choice questions automatically. The program listens for the user to press the <kbd>Ctrl + Alt + 0</kbd> key combination. When this key combination is detected, the application captures the current contents of the clipboard (the user must first copy the question using <kbd>Ctrl + C</kbd>), sends it to ChatGPT for processing, and then forwards the generated response to a specified Discord webhook and also copy it to clipboard.
 
-# **New linux version!**
-Now you can use it on linux
 
 ## Prompt
 The script includes a [prompt](https://github.com/otema666/chatgpt-test-solver-api/blob/main/prompt.txt) to guide ChatGPT on how it should respond. Here it is:
@@ -51,8 +49,11 @@ install_requirements.bat
 ```sh
 git clone https://github.com/otema666/chatgpt-test-solver-api.git && cd chatgpt-test-solver-api/linux/ && bash install.sh 
 ```
+* Enter [OpenAI API key](https://platform.openai.com/api-keys) when asked
+* Script will be configured on startup.
+* To change api key manually, open linux/clipboar_main.py and replace `api_key` var.
 
-## Usage
+## Usage (Windows)
 
 #### If you have the gcc compiler:
   1. Open `loader.bat` (if you have **Windows 10/11 HOME** use `loadWinHOME.bat`)
