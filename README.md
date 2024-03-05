@@ -17,6 +17,11 @@ and respond with the letter that corresponds to the correct answer, based solely
 question. Remember, your responses should be concise, directly indicating the choice you determine to be correct. Let's 
 start.
 ```
+### New: now you can enter manually the prompt (only in Linux):
+usage: `prompt:"<custom_prompt>" <message>`
+
+usage example: `prompt:"this is the custom prompt" this is the message to ask ChatGPT`, then copy <kbd>Ctrl + C</kbd> and finally <kbd>Ctrl + Alt + 0</kbd>, wait and answer will be in yout clipboard.
+
 
 ## Setting Up
 
