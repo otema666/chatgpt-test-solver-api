@@ -13,6 +13,7 @@ echo "# ChatGPT Api bind key" >> $HOME/.xbindkeysrc
 echo '"bash '$path'/main.sh"' >> $HOME/.xbindkeysrc
 echo "   Control + Alt + 0" >> $HOME/.xbindkeysrc
 killall -s1 xbindkeys
+xbindkeys
 sed -i '2i\path='"$path" main.sh
 
 printf "\e[32m%s\e[0m" "[*] Enter your ChatGpt api key: "
@@ -27,5 +28,3 @@ echo -e "\e[33m\t[-] In a few seconds, you will have the answer in your clipboar
 echo -e "\n"
 
 echo "[+] Done"
-
-
