@@ -2,7 +2,12 @@
 
 path=$(pwd)
 echo "[+] Configurando..."
-sudo apt install xbindkeys &> /dev/null
+echo "[-] Instalando xbindkeys..."
+sudo apt install xbindkeys -y &> /dev/null
+pip3 install revChatGPT
+pip3 install requests
+pip3 install pyperclip
+source $HOME/.bashrc
 xbindkeys --defaults > $HOME/.xbindkeysrc
 echo "# ChatGPT Api bind key" >> $HOME/.xbindkeysrc
 echo '"bash '$path'/main.sh"' >> $HOME/.xbindkeysrc
